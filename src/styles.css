@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+
+body {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mdc-dialog__surface {
+  background-color: rgba(0, 0, 0, 0) !important; /* translucent black */
+  border-radius: 0px;
+}
+
+.mat-mdc-dialog-surface::before,
+.mdc-dialog__container::before {
+  border-radius: 0px;
+}
+
+.cdk-overlay-backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px); /* for Safari */
+  border-radius: 0;
+  border-radius: 0px;
+}

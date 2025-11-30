@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- signup.component.html -->
+  <h2>Log In</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-section">
+      <label> Email </label>
+      <div class="inputs">
+        <input type="email" formControlName="email" />
+        <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          Enter a valid email.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label> Password </label>
+      <div class="inputs">
+        <input type="password" formControlName="password" />
+        <div
+          *ngIf="form.get('password')?.invalid && form.get('password')?.touched"
+        >
+          Password must be at <br />
+          least 6 characters.
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="form.invalid">Log In</button>
+  </form>
+</div>
